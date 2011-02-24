@@ -40,13 +40,13 @@ Once we have the version control system running, we can start on the Continuous 
 - similarity between 'normal code'
 - Why logging in to a server, is considered harmfull
 
-* 00:31 - 00:45 Behavioral Monitoring * 
+** 00:31 - 00:45 Behavioral Monitoring **
 
 We're fond of the Cucumber BDD tool.  It can also be used for testing infrastructure, so we'll knock up some quick Cucumber scenarios that pertain to our infrastructure, to make sure that the machine is working correctly.  Then we'll show how those tests can be driven from Jenkins and the popular open source monitoring tool, Nagios (via the cucumber-nagios plugin).
 
 - shows you that you can run tests against infrastructure similar to development
 
-* 00:46 - 00:60 Application Development *
+** 00:46 - 00:60 Application Development **
 
 Now that we have the complete infrastructure (JEOS+ ruby) build, we'll take are of the other part: make a very simple Ruby on Rails application, and version control it in Git. We'll add some trivial unit tests and a cucumber feature.  We will add the tests to Jenkins too , so our (hypothetical) colleagues have the assurance that we're ready to release our code at any time.  Later we'll add more Cucumber features to prove that the the code continues to work, after it's deployed.
 
