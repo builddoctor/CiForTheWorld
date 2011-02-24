@@ -7,13 +7,13 @@ Ideally we'd be able to have an iPad/laptop for the slides and a laptop for the 
 
 The session will run as follows:
 
-* 00:00 - 00:10 Introduction, latecomers and schedule. *
+** 00:00 - 00:10 Introduction, latecomers and schedule. **
 
 It'll be hard to summarize all the ground that we have to cover, so we'll try and push that into each session.  What is important is to demonstrate (however briefly) the application that is our vehicle for the talk.  
 
 We'll make the examples related to deploying this application - a simple Ruby application (simple because it's a demo and we don't want to provoke Murphy, and Ruby because it can have annoying dependencies - which chimes with our message that you're not done until it's deployed in production).  We mention many technology options below, but will only demonstrate one - that's subject to change at the moment because we have no vendor alliances (we might like some more than others, and we both run consulting companies, but apart from that ...)
 
-* 00:11 - 00:20 Installation of the operating system. *
+** 00:11 - 00:20 Installation of the operating system. **
 
 We might as well diverge at the start.  The production operating system install generally comes later in the project lifecycle, but we're going to front-load it because a) it's much easier these days and b) we want system integration from the start. 
 
@@ -27,7 +27,7 @@ Similar to building software, installing an OS depends on several parts to be av
 We'll be using the Vagrant tool to build virtual machines, with the VeeWee wrapper that makes bootstrapper easier. 
 We can check this in as 'source code' in a local GIT repo and run basic tests using cucumber to verify the basic functionality
 
-* 00:21 - 00:30 Configuration Management. *
+** 00:21 - 00:30 Configuration Management. **
 
 After the initial install, usually people start entering manual commands on the system. This often makes the system developer friendly and scares people to do the process often. A better way of doing this is by using a configuration management system.
 
@@ -50,7 +50,7 @@ We're fond of the Cucumber BDD tool.  It can also be used for testing infrastruc
 
 Now that we have the complete infrastructure (JEOS+ ruby) build, we'll take are of the other part: make a very simple Ruby on Rails application, and version control it in Git. We'll add some trivial unit tests and a cucumber feature.  We will add the tests to Jenkins too , so our (hypothetical) colleagues have the assurance that we're ready to release our code at any time.  Later we'll add more Cucumber features to prove that the the code continues to work, after it's deployed.
 
-* 0:61 - 00:70  (Test Run)time *
+** 0:61 - 00:70  (Test Run)time **
 
 Up until know, we've only tested each part individually. Therefore we'll deploy the application to the virtual machine that we prepared earlier, using Vlad the Deployer.  We'll update Nagios to start running the Cucumber tests that we made when we wrote the application, so the operations department can have assurance that the code is doing what it should. 
 
@@ -58,7 +58,7 @@ Up until know, we've only tested each part individually. Therefore we'll deploy 
 - How the test build a global artifact (from both application and operating system)
 - Automation without testing is suicide
 
-* 00:71 - 00:80 (Production Run)time in the cloud *
+** 00:71 - 00:80 (Production Run)time in the cloud **
 
 And finally, it's time to deliver some /real/ value! We take all this stuff and put it to good use:  We'll demonstrate that with some tiny configuration changes, we can deploy the same operating system configurations and the same application on a brand-new cloud infrastructure.  You want DR?  We have DR!
 
@@ -67,7 +67,7 @@ Repeating the same installation for N machines in the cloud is a breeze now!
 - If it's hard do it more often
 - Software doesn't bring value until it's deployed in production
 
-* 00:81 - 00:90 Wrap-up *
+** 00:81 - 00:90 Wrap-up **
 
 Contingency, recap and questions.
 
@@ -77,6 +77,4 @@ _References :_
 - [http://www.slideshare.net/jedi4ever/hudson-hit-puppet-with-a-cucumber](http://www.slideshare.net/jedi4ever/hudson-hit-puppet-with-a-cucumber)
 - [http://www.agileweboperations.com/system-configurations-code-revisions-continuous-integration-ftw](http://www.agileweboperations.com/system-configurations-code-revisions-continuous-integration-ftw)
 - [http://www.slideshare.net/jedi4ever/continuous-integration-for-the-world-keynote-final](http://www.slideshare.net/jedi4ever/continuous-integration-for-the-world-keynote-final)
--
-[http://www.slideshare.net/jedi4ever/devops-the-war-is-over-if-you-want-it](http://www.slideshare.net/jedi4ever/devops-the-war-is-over-if-you-want-it)
-from slide 54
+- [http://www.slideshare.net/jedi4ever/devops-the-war-is-over-if-you-want-it](http://www.slideshare.net/jedi4ever/devops-the-war-is-over-if-you-want-it) from slide 54
